@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="stylesheet"
+        href="styles.css">
+       
+        <title>rps-autoplay</title>
+    </head>
+    <body>
+
+
+        <p class="title">ROCK PAPER SCISSORS</p>
+
+        <button class="game-button" onclick="
+          computerMove();
+           playerMove='Rock';
+           playGame(playerMove);
+        "><img src="images/rock-emoji.png" alt="Rock" class="move-icon"></button>    
+
+        <button class="game-button" onclick="
+             computerMove();
+           playerMove='Paper';
+           playGame(playerMove);
+        "><img src="images/paper-emoji.png" alt="Paper" class="move-icon"></button>
+
+        <button class="game-button" onclick="
+            
+            computerMove();
+           playerMove='Scissors';
+           playGame(playerMove);
+           
+        "><img src="images/scissors-emoji.png" alt="Scissors" class="move-icon"></button>
+
+        <p class="js-result"></p>
+
+        <p class="js-move"></p>
+
+        <p class="js-score"></p>
+
+
+        <button class="button" onclick="
+        score.games=0;
+        score.wins=0;
+        score.losses=0;
+        score.ties=0;
+        localStorage.removeItem('score');
+        updatescore();
+        alert(`Games:${score.games},Wins:${score.wins},Losses:${score.losses},Ties:${score.ties}`)">Reset Score</button>
+
+        <button class="button" onclick="
+        autoplay();">AutoPlay</button>
+
+
+<script src="index.js"></script>
+    </body>
+</html>
